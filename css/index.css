@@ -9,8 +9,10 @@
     position:absolute;
     bottom:0;
     width:100%;
-    font-family:'Lucida Sans Unicode';
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     text-align: center;
+    font-size: 12px; 
+    color: black;
 }
 
 #menu ul {
