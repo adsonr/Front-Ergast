@@ -6,7 +6,7 @@
 }
 
 .footer {
-    position:absolute;
+    position: fixed;
     bottom:0;
     width:100%;
     font-family: "Trebuchet MS", Tahoma, sans-serif;
@@ -48,12 +48,14 @@
 .banner-container {
     background-color: black;
     text-align: center;
+    
 }
 
 #slider {
     width: 720px;
     height: 400px;
-    overflow: hidden; 
+    overflow: hidden;
+    margin: 0 auto;
 } 
 
 #slider .slides {
@@ -69,11 +71,17 @@
     list-style-type: none;
     width: 720px;
     height: 400px;
+    margin-top: 10px;
 }
 
 .text-muted {
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     text-align: center;
+    margin-top: 20px;
+    
+}
 
+.main-container {
+    padding-bottom: 30px;
 }
