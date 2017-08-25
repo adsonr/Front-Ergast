@@ -71,6 +71,12 @@
     height: 400px;
 }
 
+.text-muted {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
 .slide1 {background: red;}
 .slide2 {background: blue;}
 .slide3 {background: green;}

@@ -1,6 +1,6 @@
 'use strict';
 
-$(function() {
+$(document).ready(function() {
 
     //settings for slider
     var width = 720;
