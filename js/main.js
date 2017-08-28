@@ -1,6 +1,6 @@
 'use strict';
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     //settings for slider
     var width = 720;
@@ -17,9 +17,9 @@ $(document).ready(function() {
 
     function startSlider() {
         console.log('startSlider');
-        interval = setInterval(function() {
+        interval = setInterval(function () {
             console.log('executeSlider');
-            $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+            $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, function () {
                 if (++currentSlide === $slides.length) {
                     currentSlide = 1;
                     $slideContainer.css('margin-left', 0);
@@ -30,13 +30,13 @@ $(document).ready(function() {
 
     function nextSlider() {
         console.log('nextSlider');
-        $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+        $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, function () {
             console.log('nextSlider callback');
             if (++currentSlide === $slides.length) {
                 currentSlide = 1;
                 $slideContainer.css('margin-left', 0);
             }
-            timeout = setTimeout(function() {
+            timeout = setTimeout(function () {
                 nextSlider();
             }, pause);
         });
@@ -55,8 +55,14 @@ $(document).ready(function() {
     startSlider2();
 
     function startSlider2() {
-        timeout = setTimeout(function() {
+        timeout = setTimeout(function () {
             nextSlider();
         }, pause);
     }
+
+    $("driverInformation").click(function () {
+        xhttp.open("GET", "demo_get.asp", true);
+        xhttp.send();
+        });
+    });
 });
