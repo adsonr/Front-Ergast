@@ -60,9 +60,33 @@ $(document).ready(function () {
         }, pause);
     }
 
-    $("driverInformation").click(function () {
-        xhttp.open("GET", "demo_get.asp", true);
-        xhttp.send();
+    fetch('http://ergast.com/api/f1/drivers.json', {
+        method: "GET"
+    })
+        .then(
+        function (response) {
+            if (response.status !== 200) {
+                console.log('Ocorreu um erro. Status Code: ' +
+                    response.status);
+                return;
+            }
+
+            // resposta 
+            response.json().then(function (data) {
+                var drivers = data['MRData']['DriverTable']['Drivers'];
+
+                drivers.forEach(function(element) {
+                    var driverEl = document.createElement('li');
+                    driverEl.innerHTML = '<p>' + element.givenName  + ': ' + element.driverId + '</p>';
+                    document.getElementById('drivers-list').appendChild(driverEl);
+                });
+            });
+        }
+        )
+        .catch(function (err) {
+            console.log('Fetch Error: ', err);
         });
-    });
+
+
+
 });
