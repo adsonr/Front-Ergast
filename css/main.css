@@ -85,3 +85,11 @@
 .main-container {
     padding-bottom: 30px;
 }
+
+#driverEl {
+    font-family: 'Time News Roman';
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+}
