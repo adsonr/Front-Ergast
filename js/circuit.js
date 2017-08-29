@@ -17,5 +17,4 @@ fetch('http://ergast.com/api/f1/circuits.json', {
                 document.getElementById('circuit-list').appendChild(circuitEl);
             })
         })
-    }
-    )
+    })
